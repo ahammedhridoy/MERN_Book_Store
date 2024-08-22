@@ -24,7 +24,7 @@ const SideBar = () => {
           className="w-10 h-10 rounded-full"
           imgAlt="Flowbite logo"
         >
-          <p>{user?.displayName || "Demo User"}</p>
+          <p>{user?.displayName || "User"}</p>
         </Sidebar.Logo>
         <Sidebar.Items>
           <Sidebar.ItemGroup>

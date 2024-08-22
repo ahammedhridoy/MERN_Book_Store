@@ -1,34 +1,35 @@
-import React from 'react'
+import React from "react";
 // react icons
-import { FaStar } from 'react-icons/fa6'
-import { Avatar } from 'flowbite-react';
-import profile from "../../assets/profile.jpg"
+import { FaStar } from "react-icons/fa6";
+import { Avatar } from "flowbite-react";
+import profile from "../../assets/profile.jpg";
 
 const ReviewCard = () => {
-    return (
-        <div className='space-y-6'>
-            <div className='text-amber-500 flex gap-2'>
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-            </div>
+  return (
+    <div className="space-y-6">
+      <div className="flex gap-2 text-amber-500">
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaStar />
+      </div>
 
-            {/* texts */}
-            <div className='mt-7'>
-                <p className='mb-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel voluptatibus libero eaque illo voluptate ducimus commodi, eos, quam repellendus, officiis esse cum alias nemo blanditiis dolore quas officia molestiae accusantium!</p>
-                <Avatar
-                    alt="avatar of Jese"
-                    img={profile}
-                    rounded
-                    className='w-10 mb-4'
-                />
-                <h5 className='text-lg font-medium'>Mark Ping</h5>
-                <p className='text-sm'> CEO, ABC Company</p>
-            </div>
-        </div>
-    )
-}
+      {/* texts */}
+      <div className="mt-7">
+        <p className="mb-5">
+          This book is a game-changer for anyone looking to build better habits
+          or break bad ones. James Clear offers practical advice backed by
+          science, making it easy to understand and apply to your daily life.
+          The concepts of habit stacking and the 1% improvement really resonated
+          with me. A must-read for personal development enthusiasts.
+        </p>
 
-export default ReviewCard
+        <h5 className="text-lg font-medium">Mark Ping</h5>
+        <p className="text-sm"> CEO, ABC Company</p>
+      </div>
+    </div>
+  );
+};
+
+export default ReviewCard;
