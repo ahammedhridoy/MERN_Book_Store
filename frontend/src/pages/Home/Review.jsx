@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,9 +11,6 @@ import { Pagination } from "swiper/modules";
 
 // react icons
 import { FaStar } from "react-icons/fa6";
-import { Avatar } from "flowbite-react";
-import profile from "../../assets/profile.jpg";
-import ReviewCard from "../shared/ReviewCard";
 
 const Review = () => {
   return (

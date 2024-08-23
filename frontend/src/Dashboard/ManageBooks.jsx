@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { Table } from "flowbite-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Pagination } from "flowbite-react";
 import { Link } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const ManageBooks = () => {
   // delete a books
   const handleDelete = (id) => {
     // console.log(id)
-    fetch(`http://localhost:5000/book/${id}`, {
+    const response = fetch(`http://localhost:5000/book/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -25,11 +26,14 @@ const ManageBooks = () => {
         // console.log(data);
         // setAllBooks(data);
       });
-  };
 
-  // pagination
-  const [currentPage, setCurrentPage] = useState(1);
-  const onPageChange = () => setCurrentPage(page);
+    console.log(response);
+
+    if (response.status === 200) {
+      alert("Book deleted successfully");
+      window.location.reload();
+    }
+  };
 
   return (
     <div className="px-4 my-12">
@@ -78,7 +82,7 @@ const ManageBooks = () => {
         ))}
       </Table>
 
-      {/* pagination */}
+      {/* pagination
       <div className="flex items-center justify-center mt-8 text-center">
         <Pagination
           currentPage={1}
@@ -91,7 +95,7 @@ const ManageBooks = () => {
           showIcons
           totalPages={1000}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

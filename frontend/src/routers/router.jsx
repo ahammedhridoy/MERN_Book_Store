@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { Home } from "../pages/Home/Home";
 import Shop from "../pages/Shop/Shop";
@@ -16,6 +16,8 @@ import ErrorPage from "../pages/shared/ErrorPage";
 import About from "../pages/about/About";
 import Blog from "../pages/blog/Blog";
 import Checkout from "../pages/Checkout/Checkout";
+import Success from "../pages/Success/Success";
+import Cancel from "../pages/Cancel/Cancel";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
+      },
+      {
+        path: "/success",
+        element: <Success />,
+      },
+      {
+        path: "/cancel",
+        element: <Cancel />,
       },
     ],
   },

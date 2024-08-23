@@ -1,8 +1,5 @@
-import React from "react";
 // react icons
 import { FaStar } from "react-icons/fa6";
-import { Avatar } from "flowbite-react";
-import profile from "../../assets/profile.jpg";
 
 const ReviewCard = () => {
   return (

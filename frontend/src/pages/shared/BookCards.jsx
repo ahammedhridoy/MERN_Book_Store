@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+/* eslint-disable react/prop-types */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -6,15 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import './styles.css';
-
 // import required modules
 import { Pagination } from "swiper/modules";
 
-import img1 from "../../assets/banner-books/book1.png";
 // react icons
 import { FaCartShopping } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 
 const BookCards = ({ headline, books }) => {
   return (
@@ -51,26 +47,22 @@ const BookCards = ({ headline, books }) => {
               className="flex items-center justify-center text-center"
               key={book._id}
             >
-              <Link to={"/"} className="cursor-pointer">
-                <div className="relative p-8 bg-gray-100 rounded-lg">
-                  <img src={book.imageURL} alt="" className="w-full" />
-                  <div className="absolute p-2 bg-blue-700 rounded top-3 right-3 hover:bg-black ">
-                    <FaCartShopping className="w-4 h-4 text-white" />
-                  </div>
+              <div className="relative p-8 bg-gray-100 rounded-lg">
+                <img src={book.imageURL} alt="" className="w-full" />
+                <div className="absolute p-2 bg-blue-700 rounded top-3 right-3 hover:bg-black ">
+                  <FaCartShopping className="w-4 h-4 text-white" />
                 </div>
+              </div>
 
-                <div className="flex items-start justify-between mt-5 mb-8 space-y-2 text-left">
-                  <div>
-                    <h3 className="font-semibold text-black">
-                      {book.bookTitle}
-                    </h3>
-                    <p>{book.authorName}</p>
-                  </div>
-                  <div>
-                    <p className="font-bold text-blue-700">$10.00</p>
-                  </div>
+              <div className="flex items-start justify-between mt-5 mb-8 space-y-2 text-left">
+                <div>
+                  <h3 className="font-semibold text-black">{book.bookTitle}</h3>
+                  <p>{book.authorName}</p>
                 </div>
-              </Link>
+                <div>
+                  <p className="font-bold text-blue-700">${book?.bookPrice}</p>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
