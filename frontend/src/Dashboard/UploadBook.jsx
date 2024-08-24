@@ -23,6 +23,7 @@ const UploadBook = () => {
     "Religion and spirituality",
     "Science",
     "Art and design",
+    "Others",
   ];
 
   const [selectedBookCategory, setSelectedBookCategory] = useState(
